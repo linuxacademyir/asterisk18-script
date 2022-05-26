@@ -10,9 +10,11 @@ This script :
 - will create 2 sip users 100 and 200
 - installs webphone from [@InnovateAsterisk/Browser-Phone](https://github.com/InnovateAsterisk/Browser-Phone)
 
-******** Note1: Please replace yourdomain.com with your own domain.
-******** Note2: Before you run this script your domain registrar account set your DNS to ns1.yourdomain.com and ns2.yourdomain.com and allow up to 24 hours for your domain DNS to propagate.
-******** Note3: This script should be run with options.
+******** Note1: This Script should be installed on a fresh Installation 
+******** Note2: in case the script exits, there is something wrong with your configuration. unless you see the message INSTALLATION DONE
+******** Note3: Please replace yourdomain.com with your own domain.
+******** Note4: Before you run this script your domain registrar account set your DNS to ns1.yourdomain.com and ns2.yourdomain.com and allow up to 24 hours for your domain DNS to propagate.
+******** Note5: This script should be run with options.
 
 -d yourdomain.com
 -i your static IP address
@@ -85,8 +87,12 @@ then in terminal type
 asterisk -rx "reload"
 
 
-now navigate to yourdomain.com and start configuring webphone
-go to webphone settings > account :
+******** WARNING: the password in pjsip.conf is 1234 and you should change it to a more secure password in a production server 
+
+THATS IT!!
+
+Now visit to yourdomain.com and start configuring webphone
+navigate to webphone settings > account :
 Asterisk server Address: yourdomain.com
 Websocket Port: 8089
 Websocket Path: /ws
@@ -95,5 +101,6 @@ Full Name: 100
 SIP username: 100
 SIP password: 1234
 and hit Save
+
 
 ENJOY!!!
