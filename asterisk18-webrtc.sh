@@ -20,14 +20,9 @@ echo "Email: $email";
 echo "TimeZone: $timezone";
 
 
-#echo "------------------------------------------------------------------------- update Server and Set Hostname"
-#yum update -y
-#yum install net-tools npm svn vim curl git telnet wget nano epel-release -y
-#sed -i s/^SELINUX=.*$/SELINUX=disabled/ /etc/selinux/config
-#hostnamectl set-hostname voip.${ltd} --static
-#reboot
 
-##echo "------------------------------------------------------------------------- Setting timezone"
+
+echo "------------------------------------------------------------------------- Setting timezone"
 timedatectl set-timezone ${timezone}
 
 echo "------------------------------------------------------------------------- Configuring Bind9"
